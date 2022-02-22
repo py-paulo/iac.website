@@ -32,7 +32,7 @@ const lambdaRoleAttachment = new aws.iam.RolePolicyAttachment("lambdaRoleAttachm
   policyArn: aws.iam.ManagedPolicy.AWSLambdaBasicExecutionRole,
 });
 
-const lambda = new aws.lambda.Function("lambdaFunction", {
+const lambda = new aws.lambda.Function("click.view.website", {
   code: new pulumi.asset.AssetArchive({
     ".": new pulumi.asset.FileArchive("./app"),
   }),
